@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TankClient extends Frame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	public static final int GAME_WIDTH = 800;
 	public static final int GAME_HEIGHT = 600;
 	
@@ -44,7 +49,7 @@ public class TankClient extends Frame {
 			t.draw(g);
 		}
 		
-		myTank.draw(g);
+		//myTank.draw(g);
 		
 	
 	}
@@ -64,6 +69,8 @@ public class TankClient extends Frame {
 	}
 	
 	public void launchFrame() {
+		
+		tanks.add(myTank);
 		
 		for(int i=0; i<10; i++) {
 			tanks.add(new Tank(50 + 40*(i+1), 50, false, Tank.Direction.D, this));
